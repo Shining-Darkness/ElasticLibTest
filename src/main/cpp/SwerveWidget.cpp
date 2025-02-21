@@ -56,7 +56,6 @@ void SwerveWidget::InitSendable(nt::NTSendableBuilder& builder) {
         builder.AddDoubleProperty("Back Right Velocity", ([this]{return m_moduleStates[3].angle.Degrees().value();}), nullptr);
 
         builder.AddDoubleProperty("Robot Angle", ([this]{return m_robotAngle.Degrees().value();}), nullptr);
-        builder.AddDoubleProperty("Velocity", ([this]{return 30.0;}), nullptr);
 
     m_table = builder.GetTable();
 }
